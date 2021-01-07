@@ -15,6 +15,7 @@ gem 'bootsnap', require: false # Reduces boot times through caching; required in
 gem 'i18n-js', '3.5.1' # A library to provide the I18n translations on the Javascript
 
 # Authentications & Authorizations
+gem 'devise' # Authentication
 gem 'pundit' # Minimal authorization through OO design and pure Ruby classes
 
 # Assets
