@@ -1,7 +1,18 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+# Users
+Fabricate(:user, email: 'dev+admin@thanh.xyz')
+150.times do
+  Fabricate(:user, email: FFaker::Internet.safe_email)
+end
+
+# Category
+categories = ['Antique', 'Cars', 'Furniture', 'Computer', 'Electronic', 'Clothes']
+categories.each do |category|
+  Fabricate(:listing_category, name: category)
+end
+
+# Listing
+100.times do
+  category = ListingCategory.order(Arel.sql('RANDOM()')).first
+  user = User.order(Arel.sql('RANDOM()')).first
+  Fabricate(:listing, listing_category: category, user: user)
+end
