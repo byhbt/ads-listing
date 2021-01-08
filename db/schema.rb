@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_07_105956) do
+ActiveRecord::Schema.define(version: 2021_01_08_042220) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,19 @@ ActiveRecord::Schema.define(version: 2021_01_07_105956) do
     t.index ["deleted_at"], name: "index_listings_on_deleted_at"
     t.index ["listing_category_id"], name: "index_listings_on_listing_category_id"
     t.index ["user_id"], name: "index_listings_on_user_id"
+  end
+
+  create_table "rails_admin_settings", id: :serial, force: :cascade do |t|
+    t.boolean "enabled", default: true
+    t.string "kind", default: "string", null: false
+    t.string "ns", default: "main"
+    t.string "key", null: false
+    t.text "raw"
+    t.string "label"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["key"], name: "index_rails_admin_settings_on_key"
+    t.index ["ns", "key"], name: "index_rails_admin_settings_on_ns_and_key", unique: true
   end
 
   create_table "users", force: :cascade do |t|
