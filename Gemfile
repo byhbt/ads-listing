@@ -13,7 +13,8 @@ gem 'fabrication' # Fabrication generates objects in Ruby. Fabricators are schem
 gem 'sidekiq' # background processing for Ruby
 gem 'bootsnap', require: false # Reduces boot times through caching; required in config/boot.rb
 gem 'i18n-js', '3.5.1' # A library to provide the I18n translations on the Javascript
-gem 'rails_admin', '~> 2.0'
+gem 'rails_admin', '~> 2.0' # RailsAdmin is a Rails engine that provides an easy-to-use interface for managing your data.
+gem 'rails_admin_settings' # App settings editable via RailsAdmin
 
 # Authentications & Authorizations
 gem 'devise' # Authentication
