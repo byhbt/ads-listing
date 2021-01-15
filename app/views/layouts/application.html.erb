@@ -8,13 +8,12 @@
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_pack_tag 'application' %>
   </head>
-
-  <body>
+  <body class="<%= controller_name.dasherize %> <%= action_name.dasherize %>">
     <%= render 'shared/nav' %>
+
     <main role="main" class="container">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-      <%= render 'shared/slider' %>
+      <%= render 'shared/flashes' %>
+
       <%= yield %>
     </main>
   </body>
