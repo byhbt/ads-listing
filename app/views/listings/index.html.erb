@@ -1,30 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Content</th>
-      <th>User</th>
-      <th>Listing category</th>
-<!--      <th colspan="3"></th>-->
-    </tr>
-  </thead>
-  <tbody>
-    <% @listings.each do |listing| %>
-      <tr>
-        <td><%= listing.title %></td>
-        <td><%= listing.content %></td>
-        <td><%= listing.user.email %></td>
-        <td><%= listing.listing_category.name %></td>
-<!--        <td><%#= link_to 'Show', listing %></td>-->
-<!--        <td><%#= link_to 'Edit', edit_listing_path(listing) %></td>-->
-<!--        <td><%#= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-<%== pagy_nav(@pagy) %>
+<div class="card-columns">
+  <% @listings.each do |listing| %>
+    <div class="card">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><%= listing.title %></h5>
+        <p class="card-text"><%= listing.content %></p>
+        <p class="card-text"><small class="text-muted"><%= listing.user.email %> - <%= listing.listing_category.name %></small></p>
+      </div>
+    </div>
+  <% end %>
+</div>
+<nav aria-label="Listing navigation">
+  <%== pagy_bootstrap_nav(@pagy) %>
+</nav>
 <br>
 
 <%= link_to 'New Listing', new_listing_path %>
