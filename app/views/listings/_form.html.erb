@@ -1,0 +1,53 @@
+<%= form_with model: listing, local: true, html: { role: 'form', class: 'form-horizontal'} do |form| %>
+  <% if listing.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(listing.errors.count, "error") %> prohibited this listing from being saved:</h2>
+
+      <ul>
+        <% listing.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="col-sm-12">
+    <div class="form-group">
+      <%= form.label :title, class: 'control-label col-sm-1' %>
+      <div class="col-sm-11">
+        <%= form.text_field :title, class: 'form-control' %>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-12">
+    <div class="form-group">
+      <%= form.label :content, class: 'control-label col-sm-1' %>
+      <div class="col-sm-11">
+        <%= form.text_area :content, class: 'form-control' %>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-12">
+    <div class="form-group">
+      <%= form.label :user, class: 'control-label col-sm-1' %>
+      <div class="col-sm-11">
+        <%= form.text_field :user, class: 'form-control' %>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-12">
+    <div class="form-group">
+      <%= form.label :listing_category, class: 'control-label col-sm-1' %>
+      <div class="col-sm-11">
+        <%= form.text_field :listing_category, class: 'form-control' %>
+      </div>
+    </div>
+  </div>
+
+  <div class="actions text-center">
+    <%= form.submit class: 'btn btn-success' %>
+  </div>
+<% end %>
