@@ -5,6 +5,7 @@ require File.expand_path('../config/environment', __dir__)
 
 require 'spec_helper'
 require 'rspec/rails'
+require 'devise'
 require 'json_matchers/rspec'
 require 'pundit/rspec'
 
