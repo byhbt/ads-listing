@@ -2,7 +2,7 @@
 
 ## Introduction
 
-> *App introduction goes here ...*
+
 
 ## Project Setup
 
