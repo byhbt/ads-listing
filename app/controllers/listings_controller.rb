@@ -1,6 +1,8 @@
 class ListingsController < ApplicationController
   before_action :set_listing, only: [:show, :edit, :update, :destroy]
 
+  include Authentication
+
   # GET /listings
   def index
     @pagy, @listings = pagy(Listing.all)
@@ -21,7 +23,8 @@ class ListingsController < ApplicationController
 
   # POST /listings
   def create
-    @listing = Listing.new(listing_params)
+    @category = ListingCategory.find(listing_params[:listing_category])
+    @listing = Listing.new(listing_params.merge(user: current_user, listing_category: @category))
 
     if @listing.save
       redirect_to @listing, notice: 'Listing was successfully created.'
@@ -46,13 +49,14 @@ class ListingsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_listing
-      @listing = Listing.find(params[:id])
-    end
 
-    # Only allow a trusted parameter "white list" through.
-    def listing_params
-      params.require(:listing).permit(:title, :content, :user, :listing_category)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_listing
+    @listing = Listing.find(params[:id])
+  end
+
+  # Only allow a trusted parameter "white list" through.
+  def listing_params
+    params.require(:listing).permit(:title, :content, :listing_category)
+  end
 end
