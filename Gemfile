@@ -18,6 +18,8 @@ gem 'rails_admin_settings' # App settings editable via RailsAdmin
 
 # Authentications & Authorizations
 gem 'devise' # Authentication
+gem 'devise-bootstrap-views', '~> 1.0' # Bootstrap style Devise
+gem 'devise-i18n' # Languages package for Devise
 gem 'pundit' # Minimal authorization through OO design and pure Ruby classes
 
 # Assets
@@ -25,7 +27,7 @@ gem 'webpacker', '~>5.2.0' # Transpile app-like JavaScript
 gem 'sass-rails' # SASS
 
 # Translations
-# gem 'rails-i18n', '~> 6.0.0' # Translations for Rails
+gem 'rails-i18n', '~> 6.0.0' # Translations for Rails
 
 group :development do
   gem 'foreman' # Manage Procfile-based applications
