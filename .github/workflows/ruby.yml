@@ -15,7 +15,9 @@ on:
 
 jobs:
   linters:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
+    env:
+      RAILS_ENV: test
     strategy:
       matrix:
         ruby-version: ['2.7.2']
@@ -32,4 +34,4 @@ jobs:
 
       - name: Run linters
         run: |
-          rubocop --parallel
+          bundle exec rubocop --parallel
