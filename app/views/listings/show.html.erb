@@ -12,12 +12,12 @@
 
 <p>
   <strong>User:</strong>
-  <%= @listing.user %>
+  <%= @listing.user.email %>
 </p>
 
 <p>
   <strong>Listing category:</strong>
-  <%= @listing.listing_category %>
+  <%= @listing.listing_category.name %>
 </p>
 
 <%= link_to 'Edit', edit_listing_path(@listing) %> |

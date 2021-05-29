@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin123', as: 'rails_admin'
 
-  resources :listings
+  resources :listings, controller: 'listings'
   resources :category, controller: 'listing_categories'
 
   devise_for :users

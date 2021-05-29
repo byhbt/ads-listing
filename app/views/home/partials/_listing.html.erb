@@ -1,9 +1,9 @@
 <div class="media">
   <img src="https://picsum.photos/200/200" class="mr-3" alt="<%= listing.title %>">
   <div class="media-body">
-    <h5 class="mt-0"><%= listing.title %></h5>
+    <h5 class="mt-0">
+      <%= link_to listing.title, listing_path(listing.id) %>
+    </h5>
     <p><%= listing.content %></p>
   </div>
 </div>
-
-<hr>
