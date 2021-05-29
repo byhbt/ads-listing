@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ListingCategoriesController < ApplicationController
   before_action :set_listing_category, only: [:show]
 
@@ -7,7 +9,8 @@ class ListingCategoriesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+
+  # Use callbacks to share common setup or constraints between actions.
   def set_listing_category
     @listing_category = ListingCategory.find(params[:id])
   end

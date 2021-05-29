@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Fabricator(:listing_category) do
   name_str = FFaker::Lorem.word.capitalize
   name { name_str }

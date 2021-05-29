@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Authentication
   extend ActiveSupport::Concern
 
@@ -11,4 +13,3 @@ module Authentication
     end
   end
 end
-
