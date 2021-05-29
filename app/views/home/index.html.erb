@@ -6,9 +6,10 @@
       </ul>
     </div>
     <div class="col-md-9 gedf-main">
-      Buy & Sell Secondhand
-      You Can Buy, Sell Or Simply Trade Anything You Can Think Of.
-
+      <p class="alert alert-info">
+        Buy & Sell Secondhand
+        You Can Buy, Sell Or Simply Trade Anything You Can Think Of.
+      </p>
       <%= render partial: 'home/partials/listing', collection: @listings %>
       <%== pagy_bootstrap_nav(@pagy) %>
     </div>
