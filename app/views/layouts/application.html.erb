@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang='<%= I18n.locale %>'>
   <head>
-    <title>Listing</title>
+    <title>Mã giảm giá</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,12 +11,13 @@
   <body class="<%= controller_name.dasherize %> <%= action_name.dasherize %>">
     <%= render 'shared/nav' %>
 
-    <main role="main" class="container-fluid">
-      <%= render 'shared/flashes' %>
+    <div class="container">
+      <main role="main" class="container-fluid">
+        <%= render 'shared/flashes' %>
 
-      <%= yield %>
-    </main>
-
+        <%= yield %>
+      </main>
+    </div>
     <%= render 'shared/footer' %>
   </body>
 </html>

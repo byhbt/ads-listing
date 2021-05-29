@@ -13,8 +13,7 @@ import 'bootstrap';
 
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
-
-import 'translations/translations';
+import I18n from "i18n-js";
 
 import 'initializers/';
 import 'screens/';

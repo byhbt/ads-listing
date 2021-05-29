@@ -1,8 +1,8 @@
 class CreateListings < ActiveRecord::Migration[6.0]
   def change
     create_table :listings do |t|
-      t.string :title
-      t.text :content
+      t.string :title, null: false
+      t.text :content, null: false
       t.string :image_url
       t.datetime :expired_at
       t.datetime :approved_at

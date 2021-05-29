@@ -1,11 +1,11 @@
 # Users
 Fabricate(:user, email: 'dev+admin@thanh.xyz')
-150.times do
-  Fabricate(:user, email: FFaker::Internet.safe_email)
-end
+# 150.times do
+#   Fabricate(:user, email: FFaker::Internet.safe_email)
+# end
 
 # Category
-categories = ['Antique', 'Cars', 'Furniture', 'Computer', 'Electronic', 'Clothes']
+categories = ['Mặt vợt', 'Cốt vợt', 'Giày', 'Phụ kiện', 'Khác']
 categories.each do |category|
   Fabricate(:listing_category, name: category)
 end

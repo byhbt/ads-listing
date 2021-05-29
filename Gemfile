@@ -1,13 +1,13 @@
 source 'https://rubygems.org'
-ruby '2.7.1'
+ruby '2.7.2'
 
 # Backend
-gem 'rails', '6.0.3.2' # Latest stable
+gem 'rails', '6.1.3' # Latest stable
 gem 'pg' # Use Postgresql as database
 gem 'puma' # Use Puma as the app server
 gem 'mini_magick' # A ruby wrapper for ImageMagick or GraphicsMagick command line
-gem 'pagy' # A pagination gem that is very light and fast
-gem 'paranoia', '2.4.2' # Paranoia is a re-implementation of acts_as_paranoid for Rails 3 and Rails 4. Soft-deletion of records
+gem 'pagy', '3.10.0' # A pagination gem that is very light and fast
+gem 'paranoia', '2.4.3' # Paranoia is a re-implementation of acts_as_paranoid for Rails 3 and Rails 4. Soft-deletion of records
 gem 'ffaker' # A library for generating fake data such as names, addresses, and phone numbers.
 gem 'fabrication' # Fabrication generates objects in Ruby. Fabricators are schematics for your objects, and can be created as needed anywhere in your app or specs.
 gem 'sidekiq' # background processing for Ruby
@@ -15,6 +15,7 @@ gem 'bootsnap', require: false # Reduces boot times through caching; required in
 gem 'i18n-js', '3.5.1' # A library to provide the I18n translations on the Javascript
 gem 'rails_admin', '~> 2.0' # RailsAdmin is a Rails engine that provides an easy-to-use interface for managing your data.
 gem 'rails_admin_settings' # App settings editable via RailsAdmin
+gem 'friendly_id', '~> 5.4.0' # FriendlyId is the "Swiss Army bulldozer" of slugging and permalink plugins for Active Record.
 
 # Authentications & Authorizations
 gem 'devise' # Authentication
