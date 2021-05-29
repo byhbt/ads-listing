@@ -7,13 +7,8 @@ require('@rails/ujs').start();
 require('@rails/activestorage').start();
 require('channels');
 
-import 'jquery';
-import 'popper.js';
-import 'bootstrap';
-
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
-import I18n from "i18n-js";
 
 import 'initializers/';
 import 'screens/';

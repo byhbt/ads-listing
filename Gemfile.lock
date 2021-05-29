@@ -67,6 +67,8 @@ GEM
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
     ast (2.4.2)
+    autoprefixer-rails (10.2.5.1)
+      execjs (> 0)
     awesome_print (1.9.2)
     bcrypt (3.1.16)
     better_errors (2.9.1)
@@ -77,6 +79,10 @@ GEM
       debug_inspector (>= 0.0.1)
     bootsnap (1.7.5)
       msgpack (~> 1.0)
+    bootstrap (5.0.1)
+      autoprefixer-rails (>= 9.1.0)
+      popper_js (>= 2.9.2, < 3)
+      sassc-rails (>= 2.0.0)
     brakeman (5.0.1)
     builder (3.2.4)
     bullet (6.1.4)
@@ -159,13 +165,13 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
-    devise-bootstrap-views (1.1.0)
     devise-i18n (1.9.4)
       devise (>= 4.7.1)
     diff-lcs (1.4.4)
     docile (1.4.0)
     erubi (1.10.0)
     erubis (2.7.0)
+    execjs (2.8.1)
     fabrication (2.22.0)
     faraday (1.4.2)
       faraday-em_http (~> 1.0)
@@ -280,6 +286,7 @@ GEM
     parser (3.0.1.1)
       ast (~> 2.4.1)
     pg (1.2.3)
+    popper_js (2.9.2)
     pry (0.13.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -508,7 +515,7 @@ GEM
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff (>= 0.4.0, < 2.0.0)
-    webpacker (5.2.2)
+    webpacker (5.4.0)
       activesupport (>= 5.2)
       rack-proxy (>= 0.6.1)
       railties (>= 5.2)
@@ -528,6 +535,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bootsnap
+  bootstrap (~> 5.0, >= 5.0.1)
   brakeman
   bullet
   capybara (>= 2.15)
@@ -542,7 +550,6 @@ DEPENDENCIES
   danger-undercover
   database_cleaner
   devise
-  devise-bootstrap-views (~> 1.0)
   devise-i18n
   fabrication
   ffaker
@@ -585,13 +592,14 @@ DEPENDENCIES
   spring
   spring-commands-rspec
   spring-watcher-listen (= 2.0.1)
+  sprockets (~> 4.0)
   timecop
   tzinfo-data
   undercover
   vcr
   webdrivers
   webmock
-  webpacker (~> 5.2.0)
+  webpacker (~> 5.4.0)
 
 RUBY VERSION
    ruby 2.7.2p137

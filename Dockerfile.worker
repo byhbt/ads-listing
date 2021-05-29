@@ -1,4 +1,4 @@
 ARG BRANCH_TAG=latest
-FROM nimblehq/ads_listing:${BRANCH_TAG}
+FROM huynhbathanh/classified:${BRANCH_TAG}
 
 CMD ./bin/sidekiq.sh

@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+
 ruby '2.7.2'
 
 # Backend
@@ -16,15 +17,16 @@ gem 'i18n-js', '3.5.1' # A library to provide the I18n translations on the Javas
 gem 'rails_admin', '~> 2.0' # RailsAdmin is a Rails engine that provides an easy-to-use interface for managing your data.
 gem 'rails_admin_settings' # App settings editable via RailsAdmin
 gem 'friendly_id', '~> 5.4.0' # FriendlyId is the "Swiss Army bulldozer" of slugging and permalink plugins for Active Record.
+gem 'sprockets', '~> 4.0' # Rack-based asset packaging
+gem 'bootstrap', '~> 5.0', '>= 5.0.1' # The most popular HTML, CSS, and JavaScript framework
 
 # Authentications & Authorizations
 gem 'devise' # Authentication
-gem 'devise-bootstrap-views', '~> 1.0' # Bootstrap style Devise
 gem 'devise-i18n' # Languages package for Devise
 gem 'pundit' # Minimal authorization through OO design and pure Ruby classes
 
 # Assets
-gem 'webpacker', '~>5.2.0' # Transpile app-like JavaScript
+gem 'webpacker', '~>5.4.0' # Transpile app-like JavaScript
 gem 'sass-rails' # SASS
 
 # Translations

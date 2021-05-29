@@ -1,5 +1,5 @@
 {
-  "name": "ads_listing",
+  "name": "classified",
   "private": true,
   "scripts": {
     "lint": "eslint . --color",
@@ -13,6 +13,7 @@
     "bootstrap": "4.5.3",
     "i18n-js": "3.5.1",
     "jquery": "3.5.1",
+    "node-sass-glob-importer": "5.3.2",
     "popper.js": "1.16.1"
   },
   "devDependencies": {

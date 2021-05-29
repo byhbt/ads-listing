@@ -1,8 +1,8 @@
-FROM ruby:2.7.1-slim
+FROM ruby:2.7.2-slim
 
 ARG BUILD_ENV=development
 ARG RUBY_ENV=development
-ARG APP_HOME=/ads_listing
+ARG APP_HOME=/classfied
 ARG NODE_ENV=development
 ARG ASSET_HOST=http://localhost
 

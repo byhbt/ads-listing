@@ -3,12 +3,16 @@
 
 // Functions
 @import 'functions/sizing';
-@import 'shared/*';
 
 // Mixins
 
 // Base
 
 // Layouts
+@import 'layouts/*';
 
 // Components
+@import 'shared/*';
+
+// Vendors
+@import 'vendor/bootstrap';
