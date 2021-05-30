@@ -3,6 +3,9 @@
 class ListingCategory < ApplicationRecord
   acts_as_paranoid
 
+  # Validations
+  validates :name, presence: true
+
   extend FriendlyId
 
   friendly_id :name, use: :slugged
